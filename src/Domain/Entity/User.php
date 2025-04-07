@@ -1,2 +1,2 @@
 <?php
-namespace Application\Domain\Entity;
+namespace Source\Application\Domain\Entity;

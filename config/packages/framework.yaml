@@ -13,3 +13,14 @@ when@test:
         test: true
         session:
             storage_factory_id: session.storage.factory.mock_file
+        serializer:
+            default_context:
+                allow_extra_attributes: true
+    http_client:
+        scoped_clients:
+            weather_api.client:
+                base_uri: 'http://api.weatherapi.com/v1/current.json'
+                headers:
+                    Accept: 'application/json'
+                query:
+                    key: '%env(WEATHER_API_KEY)%'
